@@ -10,7 +10,7 @@ RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
     fi \
     && rm -f /tmp/reinstall-cmake.sh
 
-RUN agt-get update && apt-get install build-essential nasm bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo -y
+RUN apt-get update && apt-get install build-essential nasm bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo -y
 
 # [Optional] Uncomment this section to install additional vcpkg ports.
 # RUN su vscode -c "${VCPKG_ROOT}/vcpkg install <your-port-name-here>"
